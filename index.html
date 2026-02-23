@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoxDraw Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="toolbar" aria-label="drawing tools">
+        <h1>BoxDraw Studio</h1>
+
+        <section>
+          <h2>Tool</h2>
+          <div class="tool-grid" id="tool-picker">
+            <button data-tool="line" class="is-active">Line</button>
+            <button data-tool="arrow">Arrow</button>
+            <button data-tool="box">Box</button>
+          </div>
+        </section>
+
+        <section>
+          <h2>Style</h2>
+          <div class="tool-grid" id="style-picker">
+            <button data-style="single" class="is-active">Single ─</button>
+            <button data-style="double">Double ═</button>
+            <button data-style="rounded">Rounded ╭</button>
+          </div>
+        </section>
+
+        <section>
+          <h2>Connection mode</h2>
+          <div class="tool-grid" id="mode-picker">
+            <button data-mode="connect" class="is-active">Connect</button>
+            <button data-mode="overlap">Overlap</button>
+          </div>
+        </section>
+
+        <section class="actions">
+          <button id="clear-btn">Clear</button>
+          <button id="copy-btn">Copy text</button>
+        </section>
+
+        <p class="hint">
+          Drag on the canvas to draw. In <strong>Connect</strong> mode, nearby segments auto-merge into smart joints. In
+          <strong>Overlap</strong> mode, strokes stay independent.
+        </p>
+      </aside>
+
+      <section class="workspace">
+        <pre id="canvas" aria-label="box drawing canvas" tabindex="0"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
